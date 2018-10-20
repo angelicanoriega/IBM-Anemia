@@ -15,36 +15,38 @@
 
 <body>
     <!--vista formulario  -->
-    <div id="fisrt" class="slider">
-        <div class="container-fluid slider d-flex justify-content-center align-items-center">
-            <div class="square">
-                <div class="row p-2">
-                    <div class="col-md-12 text-center p-2">
-                        <i class="fas fa-heartbeat display-2 logo"></i>
-                    </div>
-                    <div class="col-md-12 text-center p-2">
-                        <div class="row ">
-                            <div class="col-md-12 p-2">
-                                <input type="text" placeholder="">
-                            </div>
-                            <div class="col-md-12 p-2">
-                                <input type="text" placeholder="">
-                            </div>
-                            <div class="col-md-12 p-2">
-                                <input type="text" placeholder="">
-                            </div>
-                            <div class="col-md-12 p-2">
-                                <input type="text" placeholder="">
+    <div id="fisrt">
+        <div class="slider">
+            <div class="container-fluid slider d-flex justify-content-center align-items-center">
+                <div class="square">
+                    <div class="row p-2">
+                        <div class="col-md-12 text-center p-2">
+                            <i class="fas fa-heartbeat display-2 logo"></i>
+                        </div>
+                        <div class="col-md-12 text-center p-2">
+                            <div class="row ">
+                                <div class="col-md-12 p-2">
+                                    <input type="text" placeholder="">
+                                </div>
+                                <div class="col-md-12 p-2">
+                                    <input type="text" placeholder="">
+                                </div>
+                                <div class="col-md-12 p-2">
+                                    <input type="text" placeholder="">
+                                </div>
+                                <div class="col-md-12 p-2">
+                                    <input type="text" placeholder="">
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-12 text-center p-2">
-                        <div class="row">
-                            <div class="col-6 col-md-6">
-                                <i class="fas fa-camera hover display-4 p-3"></i>
-                            </div>
-                            <div class="col-6 col-md-6">
-                                <i class="fas fa-search hover display-4 p-3"></i>
+                        <div class="col-md-12 text-center p-2">
+                            <div class="row">
+                                <div class="col-6 col-md-6">
+                                    <i id="btn-camera" class="fas fa-camera hover display-4 p-3"></i>
+                                </div>
+                                <div class="col-6 col-md-6">
+                                    <i class="fas fa-search hover display-4 p-3"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -52,27 +54,40 @@
             </div>
         </div>
     </div>
+
     <!-- fin vista formulario  -->
     <!-- vista camara -->
-    <div id="second" class="slider">
-        <div class="container-fluid slider d-flex justify-content-center align-items-center">
-            <div class="square">
-                <div class="row p-2">
-                    <div class="col-md-12">
-                        <video id="video" class="pt-2" autoplay width="300"></video>
-                    </div>
-                    <div class="col-md-12 text-center">
-                        <i id="tomar" class="fas fa-camera hover display-4 p-3"></i>
-                    </div>
-                    <div class="col-md-12 text-center">
-                        <canvas id="canvas" class=" p-3 " width="150" height="150">
-                        </canvas>
+    <div id="second" class="hidden">
+        <div class="slider">
+            <div class="container-fluid slider d-flex justify-content-center align-items-center p-2">
+                <div class="container ">
+                    <div class="row  text-center bg-white">
+                        <div class="col-12 col-md-4">
+                            <video id="video" class="pt-2" autoplay width="270"></video>
+                        </div>
+                        <div class="col-12 col-lg-4 col-md-4 text-center  d-flex justify-content-center align-items-center">
+                            <i id="tomar" class="fas fa-camera hover display-4 p-3"></i>
+                        </div>
+                        <div class="col-12 col-lg-4 col-md-4 text-center d-flex justify-content-center align-items-center">
+                            <canvas id="canvas" class=" p-3 " width="150" height="150">
+                            </canvas>
+                        </div>
+                        <div class="col-md-12 text-center">
+                            <div class="row p-2">
+                                <div class="col-6 col-md-6">
+                                    <i id="return" class="far fa-arrow-alt-circle-left hover display-4 p-3"></i>
+                                </div>
+                                <div class="col-6 col-md-6">
+                                    <i id="evaluate" class="fas fa-microscope hover display-4 p-3"></i>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    </div>
+
     <!-- fin vista camara -->
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
