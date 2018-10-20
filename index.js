@@ -1,7 +1,11 @@
 const seeFirst = document.getElementById('fisrt');
 const seeSecond = document.getElementById('second');
-const btnReturn = document.getElementById('return');
+const seeThird = document.getElementById('third');
+const btnReturn = document.getElementById('return-img');
+const btnReturnFrom = document.getElementById('return-img');
 const btnCamera = document.getElementById('btn-camera');
+const btnForm = document.getElementById('btn-form');
+
 window.addEventListener("DOMContentLoaded", () => {
     const video = document.getElementById('video');
     const localStream = null;
@@ -54,4 +58,8 @@ btnCamera.addEventListener('click', () => {
 btnReturn.addEventListener('click', () => {
     seeSecond.setAttribute('class', 'hidden');
     seeFirst.removeAttribute('class');
+})
+btnForm.addEventListener('click', () => {
+    seeThird.removeAttribute('class');
+    seeFirst.setAttribute('class', 'hidden');
 })

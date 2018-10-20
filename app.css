@@ -4,6 +4,13 @@
     background-position: center;
     height: 100vh;
 }
+.title{
+    background: rgba(255, 0, 0, 0.5);
+
+}
+p{
+    color: gray;
+}
 .hidden{
     display: none;
 }
