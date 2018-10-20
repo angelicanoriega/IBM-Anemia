@@ -15,7 +15,7 @@
 
 <body>
     <!--vista formulario  -->
-    <div class="slider">
+    <div id="fisrt" class="slider">
         <div class="container-fluid slider d-flex justify-content-center align-items-center">
             <div class="square">
                 <div class="row p-2">
@@ -54,6 +54,25 @@
     </div>
     <!-- fin vista formulario  -->
     <!-- vista camara -->
+    <div id="second" class="slider">
+        <div class="container-fluid slider d-flex justify-content-center align-items-center">
+            <div class="square">
+                <div class="row p-2">
+                    <div class="col-md-12">
+                        <video id="video" class="pt-2" autoplay width="300"></video>
+                    </div>
+                    <div class="col-md-12 text-center">
+                        <i id="tomar" class="fas fa-camera hover display-4 p-3"></i>
+                    </div>
+                    <div class="col-md-12 text-center">
+                        <canvas id="canvas" class=" p-3 " width="150" height="150">
+                        </canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
     <!-- fin vista camara -->
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -62,5 +81,6 @@
     crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
+<script src="/app.js"></script>
 
 </html>
