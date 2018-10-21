@@ -78,7 +78,7 @@
                                 <p>Regresar</p>
                             </div>
                             <div class="col-6 col-md-6 text-center">
-                                <a href="#modal-2" data-toggle="modal" id="evaluate" class="fas fa-microscope hover display-4 p-3"></a>
+                                <a href="#modal-2" data-toggle="modal" id="evaluate-img" class="fas fa-microscope hover display-4 p-3"></a>
                                 <p>Evaluar imagen</p>
                             </div>
                         </div>
@@ -234,7 +234,8 @@
                                                     </div>
                                                     <div class="col-md-12">
                                                         <div id="eyes" class="hidden">
-                                                            <input id="eye-number" min="1" max="5" type="number" placeholder="ingresa número">
+                                                            <input id="eye-number" min="1" max="5" type="number"
+                                                                placeholder="ingresa número">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -253,8 +254,8 @@
                                     <i id="return-from" class="far fa-arrow-alt-circle-left hover display-4 p-3"></i>
                                     <p>Regresar</p>
                                 </div>
-                                <div class="col-6 col-md-6 text-center">
-                                    <a href="#modal-1" data-toggle="modal" id="evaluate" class="fas fa-microscope hover display-4 p-3"></a>
+                                <div class="col-6 col-md-6 text-center" id="evaluate">
+                                    <a href="#modal-1" data-toggle="modal" class="fas fa-microscope hover display-4 p-3"></a>
                                     <p>Evaluar formulario</p>
                                 </div>
                             </div>
@@ -279,18 +280,36 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body text-left">
-
-                </div>
-                <div class="modal-footer">
-                    <div class="row text-center">
-                        <div class="col-md-4"></div>
-                        <div class="col-md-4"></div>
-                        <div class="col-md-4"></div>
+                <div class="modal-body text-center">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div id="cool" class="hidden">
+                                <i class="display-2 fas fa-circle text-success"></i>
+                                <p>SANO</p>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div id="so-so"  class="hidden">
+                                <i class="display-2 fas fa-circle text-warning"></i>
+                                <p>ALERTA PARA PREVENCION DE ANÉMIA</p>
+                            </div>
+                        </div>
+                        <div  class="col-md-12">
+                            <div id="bad" class="hidden">
+                                <i class="display-2 fas fa-circle text-danger"></i>
+                                <p>PELIGRO ANÉMIA SEVERA</p>
+                            </div>
+                        </div>
                     </div>
+                </div>
+                <div class="modal-footer text-center">
+                    <i class="fas fa-circle text-success"></i>
+                    <i class="fas fa-circle text-warning"></i>
+                    <i class="fas fa-circle text-danger"></i>
                 </div>
             </div>
         </div>
+    </div>
     </div>
     <!-- fin modal search -->
     <!-- modal result -->
