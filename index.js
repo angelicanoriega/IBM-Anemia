@@ -103,6 +103,8 @@ btnNot.addEventListener('click', () => {
 })
 // Funcion de calculo
 const data = (Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8) => {
+    console.log(Q1,Q2,Q3,Q4,Q5,Q6,Q7,Q8);
+    
     const obj = {
         p1: '',
         p2: '',
@@ -114,6 +116,7 @@ const data = (Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8) => {
         p8: ''
     }
     if (Q8 === '') {
+        
         obj.p1 = (15.71) * (Q1);
         obj.p2 = (10.71) * (Q2);
         obj.p3 = (10.71) * (Q3);
@@ -141,21 +144,25 @@ seeEvaluate.addEventListener('click', () => {
     const good = document.getElementById('cool');
     const soSo = document.getElementById('so-so');
     const bad = document.getElementById('bad');
-    const suma = data(parseInt(questionOne.value), parseInt(questiontwo.value), parseInt(questionthree.value), parseInt(questionfour.value), parseInt(questionfive.value), parseInt(questionsix.value), parseInt(questionseven.value),eyeNumber.value);
+    const suma = data(parseInt(questionOne.value), parseInt(questiontwo.value), parseInt(questionthree.value), parseInt(questionfour.value), parseInt(questionfive.value), parseInt(questionsix.value), parseInt(questionseven.value),eyeNumber.value)/5;
     console.log(suma);
     
     if (suma<33) {
         good.removeAttribute('class');
+        soSo.setAttribute('class', 'hidden');
+        bad.setAttribute('class', 'hidden');
         console.log('1');
     }
-    if (33<suma<66) {
+    if (33<suma && suma<66) {
         console.log('2');
-        
-        soSo.removeAttribute('class');
+       soSo.removeAttribute('class');
+       good.setAttribute('class', 'hidden');
+       bad.setAttribute('class', 'hidden');
     }
     if (66<suma) {
-        console.log('3');
-        
+        console.log('3'); 
         bad.removeAttribute('class');
+        good.setAttribute('class', 'hidden');
+        soSo.setAttribute('class', 'hidden');
     }
 })
