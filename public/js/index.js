@@ -175,6 +175,10 @@ seeEvaluate.addEventListener('click', () => {
 
 seeEvaluateImg.addEventListener('click', () => {
     const canvas = document.getElementById('canvas');
+    const good = document.getElementById('cool-img');
+    const soSo = document.getElementById('so-so-img');
+    const bad = document.getElementById('bad-img');
+
     const img = canvas.toDataURL();
     var data = {
         imagenB64: img
@@ -191,16 +195,28 @@ seeEvaluateImg.addEventListener('click', () => {
             $("#score").val("Procesando, espere por favor...");
         },
         success: function (response) {
+            const data = response.images[0].classifiers[0].classes[0].score;
+            if(data<=0.3){
+                good.removeAttribute('class');
+                soSo.setAttribute('class', 'hidden');
+                bad.setAttribute('class', 'hidden');
+
+            }else if(data>=0.4 &&data<=0.7){
+                soSo.removeAttribute('class');
+                good.setAttribute('class', 'hidden');
+                bad.setAttribute('class', 'hidden');
+
+            }else if(data>=0.7){
+                bad.removeAttribute('class');
+                soSo.setAttribute('class', 'hidden');
+                good.setAttribute('class', 'hidden');
+
+            }else{
+                alert('toma la foto de nuevo')
+
+            }
             console.log(response)
-            $("#score").val(response);
+            // $("#score").val(response);
         }
     });
-
-
-    const good = document.getElementById('cool-img');
-    const soSo = document.getElementById('so-so-img');
-    const bad = document.getElementById('bad-img');
-    good.removeAttribute('class');
-    soSo.setAttribute('class', 'hidden');
-    bad.setAttribute('class', 'hidden');
 })
