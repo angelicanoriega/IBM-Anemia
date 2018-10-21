@@ -80,12 +80,18 @@ p{
     text-decoration: none;
     cursor: pointer;
 }
-@media (min-width: 500px){
+.slider2 {
+    background: rgba(255, 0, 0, 0.5);
+    background-size: cover;
+    background-position: center;
+    height: 700px;
+}
+@media (max-width: 768px){
     .slider2 {
         background: rgba(255, 0, 0, 0.5);
         background-size: cover;
         background-position: center;
-        height: 900px;
+        height: 100%;
     }
 
 }
