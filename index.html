@@ -221,10 +221,10 @@
                                             <div class="col-md-12">
                                                 <p>hiciste la consulta ocular</p>
                                             </div>
-                                            <div class="col-md-2">
+                                            <div class="col-12 col-md-2">
                                                 <input id="yes" type="button" value="Si">
                                             </div>
-                                            <div class="col-md-8">
+                                            <div class="col-12 col-md-8">
                                                 <div class="row">
                                                     <div class="col-md-12">
                                                         <div id="not-eyes" class="hidden text-white ">
@@ -234,12 +234,12 @@
                                                     </div>
                                                     <div class="col-md-12">
                                                         <div id="eyes" class="hidden">
-                                                            <input type="number" placeholder="ingresa número">
+                                                            <input id="eye-number" min="1" max="5" type="number" placeholder="ingresa número">
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-md-2">
+                                            <div class="col-12 col-md-2">
                                                 <input id="not" type="button" value="No">
                                             </div>
                                         </div>
@@ -274,7 +274,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h2 class="modal-title " id="Modal">Busqueda</h2>
+                    <h2 class="modal-title " id="Modal">Resultado</h2>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -283,6 +283,11 @@
 
                 </div>
                 <div class="modal-footer">
+                    <div class="row text-center">
+                        <div class="col-md-4"></div>
+                        <div class="col-md-4"></div>
+                        <div class="col-md-4"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -300,7 +305,6 @@
                     </button>
                 </div>
                 <div class="modal-body text-left">
-
                 </div>
                 <div class="modal-footer">
                 </div>
