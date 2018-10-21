@@ -110,7 +110,7 @@
                                                 <p>La madre es menor de edad?</p>
                                             </div>
                                             <div class="col-md-12">
-                                                <select>
+                                                <select id="Q1">
                                                     <option value="1">Totalmente desacuerdo</option>
                                                     <option value="2">En desacuerdo</option>
                                                     <option value="3">Ni en acuerdo ni desacuerdo</option>
@@ -126,7 +126,7 @@
                                                 <p>El niño tuvo bajo peso al nacer?</p>
                                             </div>
                                             <div class="col-md-12">
-                                                <select>
+                                                <select id="Q2">
                                                     <option value="1">Totalmente desacuerdo</option>
                                                     <option value="2">En desacuerdo</option>
                                                     <option value="3">Ni en acuerdo ni desacuerdo</option>
@@ -142,7 +142,7 @@
                                                 <p>El niño no caminó antes de los 12 meses?</p>
                                             </div>
                                             <div class="col-md-12">
-                                                <select>
+                                                <select id="Q3">
                                                     <option value="1">Totalmente desacuerdo</option>
                                                     <option value="2">En desacuerdo</option>
                                                     <option value="3">Ni en acuerdo ni desacuerdo</option>
@@ -158,7 +158,7 @@
                                                 <p>El comportamiento de niño es introvertido?</p>
                                             </div>
                                             <div class="col-md-12">
-                                                <select>
+                                                <select id="Q4">
                                                     <option value="1">Totalmente desacuerdo</option>
                                                     <option value="2">En desacuerdo</option>
                                                     <option value="3">Ni en acuerdo ni desacuerdo</option>
@@ -174,7 +174,7 @@
                                                 <p>El niño presenta dificultad al respirar?</p>
                                             </div>
                                             <div class="col-md-12">
-                                                <select>
+                                                <select id="Q5">
                                                     <option value="1">Totalmente desacuerdo</option>
                                                     <option value="2">En desacuerdo</option>
                                                     <option value="3">Ni en acuerdo ni desacuerdo</option>
@@ -190,7 +190,7 @@
                                                 <p>El niño muestra sintonas de cansancio o fatigas</p>
                                             </div>
                                             <div class="col-md-12">
-                                                <select>
+                                                <select id="Q6">
                                                     <option value="1">Totalmente desacuerdo</option>
                                                     <option value="2">En desacuerdo</option>
                                                     <option value="3">Ni en acuerdo ni desacuerdo</option>
@@ -201,36 +201,69 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6 p-2">
-                                            <div class="row">
-                                                <div class="col-md-12">
-                                                    <p>Su niño presenta palides en la piel?</p>
-                                                </div>
-                                                <div class="col-md-12">
-                                                    <select>
-                                                        <option value="1">Totalmente desacuerdo</option>
-                                                        <option value="2">En desacuerdo</option>
-                                                        <option value="3">Ni en acuerdo ni desacuerdo</option>
-                                                        <option value="4">En acuerdo</option>
-                                                        <option value="5">Totalmente deacuerdo</option>
-                                                    </select>
-                                                </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <p>Su niño presenta palides en la piel?</p>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <select id="Q7">
+                                                    <option value="1">Totalmente desacuerdo</option>
+                                                    <option value="2">En desacuerdo</option>
+                                                    <option value="3">Ni en acuerdo ni desacuerdo</option>
+                                                    <option value="4">En acuerdo</option>
+                                                    <option value="5">Totalmente deacuerdo</option>
+                                                </select>
                                             </div>
                                         </div>
+                                    </div>
+                                    <div class="col-md-6 p-2">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <p>hiciste la consulta ocular</p>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <input id="yes" type="button" value="Si">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div id="not-eyes" class="hidden text-white ">
+                                                            <p>Click en <strong>Evaluar formulario</strong> o retorna
+                                                                para hacer tu evaluación ocular</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div id="eyes" class="hidden">
+                                                            <input type="number" placeholder="ingresa número">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <input id="not" type="button" value="No">
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-6 col-md-6 text-center">
-                                <i id="return-from" class="far fa-arrow-alt-circle-left hover display-4 p-3"></i>
-                                <p>Regresar</p>
-                            </div>
-                            <div class="col-6 col-md-6 text-center">
-                                <a href="#modal-1" data-toggle="modal" id="evaluate" class="fas fa-microscope hover display-4 p-3"></a>
-                                <p>Evaluar imagen</p>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-6 col-md-6 text-center">
+                                    <i id="return-from" class="far fa-arrow-alt-circle-left hover display-4 p-3"></i>
+                                    <p>Regresar</p>
+                                </div>
+                                <div class="col-6 col-md-6 text-center">
+                                    <a href="#modal-1" data-toggle="modal" id="evaluate" class="fas fa-microscope hover display-4 p-3"></a>
+                                    <p>Evaluar formulario</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 
     <!-- fin vista formulario -->

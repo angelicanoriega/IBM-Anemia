@@ -8,6 +8,18 @@
     background: rgba(255, 0, 0, 0.5);
 
 }
+#yes{
+    cursor: pointer;
+    border: none;
+    color: white;
+    background: rgba(255, 0, 0, 0.5);
+}
+#not{
+    cursor: pointer;
+    border: none;
+    color: white;
+    background: rgba(255, 0, 0, 0.5);
+}
 p{
     color: gray;
 }
