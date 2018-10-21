@@ -4,6 +4,7 @@ const seeThird = document.getElementById('third');
 const seeEyes = document.getElementById('eyes');
 const seeNotEyes = document.getElementById('not-eyes');
 const seeEvaluate = document.getElementById('evaluate');
+const seeEvaluateImg = document.getElementById('evaluate-img');
 const btnReturn = document.getElementById('return-img');
 const btnReturnFrom = document.getElementById('return-from');
 const btnCamera = document.getElementById('btn-camera');
@@ -66,6 +67,7 @@ window.addEventListener("DOMContentLoaded", () => {
     }
     document.getElementById('tomar').addEventListener('click', () => {
         context.drawImage(video, 0, 0, 250, 300);
+
     });
 }, false);
 // visualizacion de secciones
@@ -103,8 +105,8 @@ btnNot.addEventListener('click', () => {
 })
 // Funcion de calculo
 const data = (Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8) => {
-    console.log(Q1,Q2,Q3,Q4,Q5,Q6,Q7,Q8);
-    
+    console.log(Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8);
+
     const obj = {
         p1: '',
         p2: '',
@@ -116,7 +118,7 @@ const data = (Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8) => {
         p8: ''
     }
     if (Q8 === '') {
-        
+
         obj.p1 = (15.71) * (Q1);
         obj.p2 = (10.71) * (Q2);
         obj.p3 = (10.71) * (Q3);
@@ -126,7 +128,8 @@ const data = (Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8) => {
         obj.p7 = (15.71) * (Q7);
         obj.p8 = 0;
         console.log(obj);
-    } if(Q8 !== '') {
+    }
+    if (Q8 !== '') {
         obj.p1 = (10) * (Q1);
         obj.p2 = (5) * (Q2);
         obj.p3 = (5) * (Q3);
@@ -144,25 +147,34 @@ seeEvaluate.addEventListener('click', () => {
     const good = document.getElementById('cool');
     const soSo = document.getElementById('so-so');
     const bad = document.getElementById('bad');
-    const suma = data(parseInt(questionOne.value), parseInt(questiontwo.value), parseInt(questionthree.value), parseInt(questionfour.value), parseInt(questionfive.value), parseInt(questionsix.value), parseInt(questionseven.value),eyeNumber.value)/5;
+    const suma = data(parseInt(questionOne.value), parseInt(questiontwo.value), parseInt(questionthree.value), parseInt(questionfour.value), parseInt(questionfive.value), parseInt(questionsix.value), parseInt(questionseven.value), eyeNumber.value) / 5;
     console.log(suma);
-    
-    if (suma<33) {
+
+    if (suma < 33) {
         good.removeAttribute('class');
         soSo.setAttribute('class', 'hidden');
         bad.setAttribute('class', 'hidden');
         console.log('1');
     }
-    if (33<suma && suma<66) {
+    if (33 < suma && suma < 66) {
         console.log('2');
-       soSo.removeAttribute('class');
-       good.setAttribute('class', 'hidden');
-       bad.setAttribute('class', 'hidden');
+        soSo.removeAttribute('class');
+        good.setAttribute('class', 'hidden');
+        bad.setAttribute('class', 'hidden');
     }
-    if (66<suma) {
-        console.log('3'); 
+    if (66 < suma) {
+        console.log('3');
         bad.removeAttribute('class');
         good.setAttribute('class', 'hidden');
         soSo.setAttribute('class', 'hidden');
     }
+})
+// fujo de funcionamiento
+seeEvaluateImg.addEventListener('click', () => {
+    const good = document.getElementById('cool-img');
+    const soSo = document.getElementById('so-so-img');
+    const bad = document.getElementById('bad-img');
+    good.removeAttribute('class');
+    soSo.setAttribute('class', 'hidden');
+    bad.setAttribute('class', 'hidden');
 })
