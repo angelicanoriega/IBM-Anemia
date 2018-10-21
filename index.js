@@ -18,7 +18,6 @@ app.use(bodyParser.json());
 app.post("/obtenerResultVR", function (req, response) {
 
     var imagenB64  = req.body.imagenB64;
-    console.log(imagenB64)
     base64Img.img(imagenB64, './public/imgs/', 'imagen', function(err, filepath) {
         console.log(filepath)
     })

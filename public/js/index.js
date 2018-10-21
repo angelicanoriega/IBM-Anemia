@@ -184,7 +184,6 @@ seeEvaluateImg.addEventListener('click', () => {
         imagenB64: img
     }
 
-    console.log("img", img);
     $.ajax({
         dataType: 'json',
         contentType: 'application/json',
