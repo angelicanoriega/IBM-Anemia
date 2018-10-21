@@ -67,6 +67,7 @@ window.addEventListener("DOMContentLoaded", () => {
     }
     document.getElementById('tomar').addEventListener('click', () => {
         context.drawImage(video, 0, 0, 250, 300);
+        const img=canvas.toDataURL();
 
     });
 }, false);
