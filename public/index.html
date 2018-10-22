@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>blood information</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="./app.css">
+</head>
+
+<body>
+
+    <!--vista inicio  -->
+    <div id="fisrt">
+        <div class="slider container-fluid d-flex justify-content-center align-items-center ">
+            <div class="square">
+                <div class="row ">
+                    <div class="col-md-12 text-center pt-3">
+                        <i class="fas fa-burn display-2 logo"></i>
+                    </div>
+                    <div class="col-md-12 text-center">
+                        <div class="row">
+                            <div class="col-md-12 pt-3">
+                                <h1>Yawar Sinchi</h1>
+                            </div>
+                            <div class="col-6 col-md-6  pt-3">
+                                <i id="btn-camera" class="fas fa-camera hover display-4 p-3"></i>
+                                <p>Evaluación ocular</p>
+                            </div>
+                            <div class="col-6 col-md-6  pt-3 ">
+                                <i id="btn-form" class="fas fa-microscope hover display-4 p-3 "></i>
+                                <p>Evalua datos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- fin vista inicio  -->
+    <!-- vista camara -->
+    <div id="second" class="hidden">
+        <div class="slider2 container-fluid d-flex justify-content-center align-items-center ">
+            <div class="container ">
+                <div class="row  text-center bg-white">
+                    <div class="col-md-12 pt-3">
+                        <div class="row ">
+                            <div class="col-12 col-md-4">
+                                <video id="video" class="pt-2" autoplay width="270"></video>
+                            </div>
+                            <div class="col-12 col-lg-4 col-md-4 text-center  d-flex justify-content-center align-items-center">
+                                <div class="row">
+                                    <div class="col-md-12 pt-2">
+                                        <img src="./ejemplo.png" alt="ejemplo">
+                                    </div>
+                                    <div class="col-md-12">
+                                        <i id="tomar" class="fas fa-camera hover display-4 p-3"></i>
+                                        <p>Tomar foto</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-4 col-md-4 text-center d-flex justify-content-center align-items-center">
+                                <canvas id="canvas" class=" p-3 " width="150" height="150">
+                                </canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 text-center">
+                        <div class="row p-2">
+                            <div class="col-6 col-md-6 text-center">
+                                <i id="return-img" class="far fa-arrow-alt-circle-left hover display-4 p-3"></i>
+                                <p>Regresar</p>
+                            </div>
+                            <div class="col-6 col-md-6 text-center">
+                                <a href="#modal-2" data-toggle="modal" id="evaluate-img" class="fas fa-microscope hover display-4 p-3"></a>
+                                <p>Evaluar imagen</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- fin vista camara -->
+    <!-- vista formulario -->
+    <div id="third" class="hidden">
+        <div class="slider2 container-fluid d-flex justify-content-center align-items-center ">
+            <div class="container">
+                <div class="row text-center bg-white">
+                    <div class="col-md-12 text-center pt-3">
+                        <i class="fas fa-burn display-2 logo"></i>
+                    </div>
+                    <div class="col-md-12 text-center">
+                        <div class="row">
+                            <div class="col-md-12 pt-3">
+                                <h1>Yawar Sinchi</h1>
+                                <p>Completa el formulario</p>
+                            </div>
+                            <div class="col-md-12 text-center">
+                                <div class="row">
+                                    <div class="col-md-6 p-2">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <p>Indica la edad de la madre</p>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <select id="Q1">
+                                                    <option value="1">35 años a más</option>
+                                                    <option value="2">28 años a 35 años</option>
+                                                    <option value="3">22 años a 28 años</option>
+                                                    <option value="4">18 años a 22 años</option>
+                                                    <option value="5">menor a 18 años</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 p-2">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <p>¿Cual fue el peso del niño al nacer?<p>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <select id="Q2">
+                                                    <option value="1">3.5kg - 4.2kg</option>
+                                                    <option value="2">2.8kg - 3.5kg</option>
+                                                    <option value="3">2kg - 2.8kg</option>
+                                                    <option value="4">1.5kg - 2kg</option>
+                                                    <option value="5">No recuerdo</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 p-2">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <p>El niño no caminó antes de los 12 meses?</p>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <select id="Q3">
+                                                    <option value="1">Totalmente desacuerdo</option>
+                                                    <option value="2">En desacuerdo</option>
+                                                    <option value="3">Ni en acuerdo ni desacuerdo</option>
+                                                    <option value="4">En acuerdo</option>
+                                                    <option value="5">Totalmente deacuerdo</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 p-2">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <p>¿El comportamiento del niño es ser muy tranquilo?</p>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <select id="Q4">
+                                                    <option value="1">Totalmente desacuerdo</option>
+                                                    <option value="2">En desacuerdo</option>
+                                                    <option value="3">Ni en acuerdo ni desacuerdo</option>
+                                                    <option value="4">En acuerdo</option>
+                                                    <option value="5">Totalmente deacuerdo</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 p-2">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <p>¿El niño presenta dificultad al respirar?</p>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <select id="Q5">
+                                                    <option value="1">Totalmente desacuerdo</option>
+                                                    <option value="2">En desacuerdo</option>
+                                                    <option value="3">Ni en acuerdo ni desacuerdo</option>
+                                                    <option value="4">En acuerdo</option>
+                                                    <option value="5">Totalmente deacuerdo</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 p-2">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <p>El niño muestra que tiene sintomas de cansancio</p>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <select id="Q6">
+                                                    <option value="1">Totalmente desacuerdo</option>
+                                                    <option value="2">En desacuerdo</option>
+                                                    <option value="3">Ni en acuerdo ni desacuerdo</option>
+                                                    <option value="4">En acuerdo</option>
+                                                    <option value="5">Totalmente deacuerdo</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 p-2">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <p>El niño tiene la piel palida</p>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <select id="Q7">
+                                                    <option value="1">Totalmente desacuerdo</option>
+                                                    <option value="2">En desacuerdo</option>
+                                                    <option value="3">Ni en acuerdo ni desacuerdo</option>
+                                                    <option value="4">En acuerdo</option>
+                                                    <option value="5">Totalmente deacuerdo</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 p-2">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <p>Realiza una consulta ocular</p>
+                                            </div>
+                                            <div class="col-12 col-md-2">
+                                                <input id="yes" type="button" value="Si">
+                                            </div>
+                                            <div class="col-12 col-md-8 ">
+                                                <div class="row ">
+                                                    <div class="col-md-12">
+                                                        <div id="not-eyes" class="hidden text-dark ">
+                                                            <p class="text-dark">Click en <strong>Evaluar formulario</strong>
+                                                                o retorna
+                                                                para hacer tu <strong><a class=" text-dark " href="https://angelicanoriega.github.io/IBM-Anemia/">Evaluación
+                                                                        ocular</a></strong> </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div id="eyes" class="hidden">
+                                                            <input id="eye-number" min="1" max="5" type="number"
+                                                                placeholder="ingresa número">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-2">
+                                                <input id="not" type="button" value="No">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-6 col-md-6 text-center">
+                                    <i id="return-from" class="far fa-arrow-alt-circle-left hover display-4 p-3"></i>
+                                    <p>Regresar</p>
+                                </div>
+                                <div class="col-6 col-md-6 text-center" id="evaluate">
+                                    <a href="#modal-1" data-toggle="modal" class="fas fa-microscope hover display-4 p-3"></a>
+                                    <p>Evaluar formulario</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- fin vista formulario -->
+    <!-- modals -->
+    <!-- modal search -->
+    <div class="modal fade text-center" id="modal-1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title " id="Modal">Resultado</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div id="cool" class="hidden">
+                                <i class="display-2 fas fa-circle text-success"></i>
+                                <p>SANO</p>
+                                <img class="img-thumbnail" src="https://raw.githubusercontent.com/angelicanoriega/IBM-Anemia/master/logo1.png" alt="sigue asi">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div id="so-so" class="hidden">
+                                <i class="display-2 fas fa-circle text-warning"></i>
+                                <p>ALERTA PARA PREVENCIÓN DE ANÉMIA:</p>
+                                <p>Por favor acerquese a un establecimiento medico para controlar su estado.</p>
+                                <img class="img-thumbnail" src="https://raw.githubusercontent.com/angelicanoriega/IBM-Anemia/master/tabla.gif">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div id="bad" class="hidden">
+                                <i class="display-2 fas fa-circle text-danger"></i>
+                                <p>PELIGRO ANÉMIA SEVERA</p>
+                                <p>Acuda inmediatamente a un centro de salud para controla su estado</p>
+                                <iframe   class="img-thumbnail"src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d124936.92131801006!2d-77.13016197158728!3d-11.884967672171298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1spuente+piedra+centros+de+salud!5e0!3m2!1ses!2spe!4v1540143868510"
+                                    width="300" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer text-center">
+                    <i class="fas fa-circle text-success"></i>
+                    <i class="fas fa-circle text-warning"></i>
+                    <i class="fas fa-circle text-danger"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- fin modal search -->
+    <!-- modal result -->
+    <div class="modal fade text-center" id="modal-2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title " id="Modal">Resultados</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div id="cool-img" class="hidden">
+                                <i class="display-2 fas fa-circle text-center"></i>
+                                <p>SANO</p>
+                                <p><strong>Número:1.5</strong></p>
+                                <p>El número indicado se utiliza en <strong><a class="text-dark" href="https://angelicanoriega.github.io/IBM-Anemia/">Evalua
+                                            datos</a></strong> para
+                                    un resultado más preciso</p>
+                                <img  class="img-thumbnail" src="https://raw.githubusercontent.com/angelicanoriega/IBM-Anemia/master/logo1.png" alt="sigue asi">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div id="so-so-img" class="hidden">
+                                <i class="display-2 fas fa-circle text-warning"></i>
+                                <p>ALERTA PARA PREVENCIÓN DE ANÉMIA:</p>
+                                <p>Por favor acerquese a un establecimiento medico para controlar su estado.</p>
+                                <p><strong>Número:2</strong></p>
+                                <p>El número indicado se utiliza en <strong><a class="text-dark" href="https://angelicanoriega.github.io/IBM-Anemia/">Evalua
+                                            datos</a></strong> para
+                                    un resultado más preciso</p>
+                                <img  class="img-thumbnail"  src="https://raw.githubusercontent.com/angelicanoriega/IBM-Anemia/master/tabla.gif">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div id="bad-img" class="hidden">
+                                <i class="display-2 fas fa-circle text-danger"></i>
+                                <p>PELIGRO ANÉMIA SEVERA</p>
+                                <p>Acuda inmediatamente a un centro de salud para controla su estado</p>
+                                <p><strong>Número:5</strong></p>
+                                <p>El número indicado se utiliza en <strong><a class="text-dark" href="https://angelicanoriega.github.io/IBM-Anemia/">Evalua
+                                            datos</a></strong> para
+                                    un resultado más preciso</p>
+                                <iframe  class="img-thumbnail" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d124936.92131801006!2d-77.13016197158728!3d-11.884967672171298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1spuente+piedra+centros+de+salud!5e0!3m2!1ses!2spe!4v1540143868510"
+                                    width="300" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer text-center">
+                    <i class="fas fa-circle text-success"></i>
+                    <i class="fas fa-circle text-warning"></i>
+                    <i class="fas fa-circle text-danger"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- fin modal result -->
+    <!-- fin modals -->
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+
+</html>

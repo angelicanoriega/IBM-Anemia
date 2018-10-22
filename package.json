@@ -1,0 +1,27 @@
+{
+  "name": "ibm-anemia",
+  "version": "1.0.0",
+  "description": "![Prototipo-Alta-fidelidad](https://github.com/Grecia2727/IBM-Anemia/blob/master/recursos/demo-anemia.gif)",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angelicanoriega/IBM-Anemia.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/angelicanoriega/IBM-Anemia/issues"
+  },
+  "homepage": "https://github.com/angelicanoriega/IBM-Anemia#readme",
+  "dependencies": {
+    "base64-img": "^1.0.4",
+    "body-parser": "^1.18.3",
+    "cfenv": "1.0.x",
+    "express": "4.15.x",
+    "gh-pages": "^2.0.1",
+    "watson-developer-cloud": "^3.12.0"
+  }
+}
